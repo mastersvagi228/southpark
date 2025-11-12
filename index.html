@@ -2,26 +2,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Повноекранне зображення</title>
+  <title>ти сітх</title>
   <style>
-    /* Знімаємо відступи та робимо чорний фон */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      background-color: black;
+      width: 100%;
+      background: black;
+      overflow: hidden; /* прибирає скрол */
     }
 
-    /* Картинка на весь екран */
-    body {
-      background-image: url('sitx.png'); /* шлях до твоєї картинки */
-      background-size: cover;            /* робить її на весь екран */
-      background-position: center;       /* центрує */
-      background-repeat: no-repeat;      /* не повторює */
-      background-attachment: fixed;      /* фіксує при скролі (опціонально) */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('sitx.png') no-repeat center center;
+      background-size: cover; /* робить зображення на весь екран */
     }
   </style>
 </head>
 <body>
 </body>
 </html>
+
